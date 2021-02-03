@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         myList.adapter=adapter
 
         myList.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            Toast.makeText(applicationContext, list[position].dial_code , Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, list[position].name , Toast.LENGTH_LONG).show()
         }
 
 
