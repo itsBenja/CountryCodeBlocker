@@ -1,5 +1,6 @@
 package com.example.countrycodeblocker
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -45,7 +46,15 @@ class MainActivity : AppCompatActivity() {
         myList.adapter=adapter
 
         myList.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            Toast.makeText(applicationContext, list[position].name , Toast.LENGTH_LONG).show()
+            view.setBackgroundColor(Color.BLUE)
+
+
+        }
+
+        myList.onItemLongClickListener = AdapterView.OnItemLongClickListener { parent, view, position, id ->
+            view.setBackgroundColor(Color.GREEN)
+            true
+
         }
 
 
